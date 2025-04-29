@@ -94,6 +94,7 @@ func RemoveJSComment(data string) string {
 		}
 		if inComment && v == '*' && i+1 < len(data) && data[i+1] == '/' {
 			inComment = false
+			i++
 			continue
 		}
 		if v == '/' && i+1 < len(data) {
